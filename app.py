@@ -6,7 +6,7 @@ API_KEY = "mysecretapikey123"
 
 @app.route('/get-user', methods=['GET'])
 def get_user():
-    key = request.args.get('api_key')
+    key = request.args.get('x-api_key')
     if key != API_KEY:
         return jsonify({"error": "Unauthorized"}), 401
 
