@@ -42,4 +42,4 @@ def predict_post():
     except Exception as e:
         return jsonify({'error': 'Invalid input. Please send JSON like {"size": 3000}'}
 if __name__ == "__main__":
-                       app.run(debugger=True)
+                       app.run(debug=True)
