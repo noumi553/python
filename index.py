@@ -40,11 +40,4 @@ def predict_post():
         price = model.predict([[size]])[0]
         return jsonify({'Size (sq.ft)': size, 'Predicted Price ($)': round(price, 2)})
     except Exception as e:
-        return jsonify({'error': 'Invalid input. Please send JSON like {"size": 3000}'})
-
-# Run server
-if __name__ == '__main__':
-    app.run(host='127.0.0.1',port=5000 ,debug=False)
-
-t = Thread(target=home)
-t.start()
+        return jsonify({'error': 'Invalid input. Please send JSON like {"size": 3000}'}
